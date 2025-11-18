@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1.5vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(2em, 4.2vh, 3em);
+    color: #3b7a73;
+    margin-bottom: 4.5vh;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.calculator {
+    background: white;
+    padding: clamp(22px, 3.2vh, 38px) clamp(28px, 3.8vh, 45px);
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+    width: clamp(300px, 35vw, 410px);
+    max-width: 92vw;
+}
+
+.display {
+    background: #f9f9f9;
+    border-radius: 13px;
+    height: clamp(48px, 6.5vh, 65px);
+    margin-bottom: clamp(20px, 2.5vh, 28px);
+    border: 1px solid #e8e8e8;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(9px, 1.2vh, 13px);
+}
+
+.btn {
+    background: white;
+    border: none;
+    padding: 0;
+    font-size: clamp(1.15em, 2vh, 1.45em);
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: all 0.15s;
+    color: #1a1a1a;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(52px, 6.5vh, 72px);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn.operator {
+    background: #000000;
+    color: white;
+    font-weight: 600;
+}
+
+.btn.clear {
+    background: #d9534f;
+    color: white;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        width: clamp(290px, 75vw, 390px);
+    }
+}
+
+@media (max-width: 500px) {
+    .title {
+        margin-bottom: 3.5vh;
+        font-size: clamp(1.7em, 3.8vh, 2.4em);
+    }
+    
+    .calculator {
+        padding: clamp(20px, 2.8vh, 32px) clamp(25px, 3.3vh, 38px);
+        width: 88vw;
+    }
+}
