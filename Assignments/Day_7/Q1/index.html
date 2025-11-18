@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            padding: 5vh 5vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+            padding: 6px;
+            border: 6px solid white;
+        }
+
+        .box {
+            aspect-ratio: 1.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 300;
+            color: white;
+        }
+
+        .box-2 {
+            background-color: #FF5722;
+        }
+
+        .box-3 {
+            background-color: #3F51B5;
+        }
+
+        .box-4 {
+            background-color: #FFD700;
+        }
+
+        .box-5 {
+            background-color: #9C27B0;
+        }
+
+        .box-6 {
+            background-color: #4CAF50;
+        }
+
+        .box-1 {
+            background-color: #00BCD4;
+        }
+
+        .box-7 {
+            background-color: #FF9E80;
+        }
+
+        .box-8 {
+            background-color: #4DB6AC;
+        }
+
+        .box-9 {
+            background-color: #7B0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-2">2.</div>
+        <div class="box box-3">3.</div>
+        <div class="box box-4">4.</div>
+        <div class="box box-5">5.</div>
+        <div class="box box-6">6.</div>
+        <div class="box box-1">1.</div>
+        <div class="box box-7">7.</div>
+        <div class="box box-8">8.</div>
+        <div class="box box-9">9.</div>
+    </div>
+</body>
+</html>
