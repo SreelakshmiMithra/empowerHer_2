@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Investors Grid - Responsive</title>
+
+  <style>
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    html, body {
+      min-height: 100%;
+      background: #f5f7fb;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* GRID - Default: 4 cards per row (Large screens) */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+
+    /* CARD */
+    .card {
+      width:100%;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* PHOTO */
+    .photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #e5e7eb;
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* INFO */
+    .info {
+      text-align: center;
+      padding: 16px 12px;
+      flex-grow: 1;
+    }
+
+    .info h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+
+    .info h4 {
+      font-size: 13px;
+      color: #6b7280;
+      font-weight: 600;
+    }
+
+    /* LOGO */
+    .logo {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      background: #ffffff;
+      min-height: 80px;
+    }
+
+    .logo img {
+      max-width: 120px;
+      max-height: 50px;
+      object-fit: contain;
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 1200px) {
+      .grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap:20px;
+      }
+      .wrap {
+        padding: 20px;
+      }
+      
+    }
+
+
+
+    /* Medium screens: 3 cards per row */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .wrap {
+        padding: 18px;
+      }
+    }
+
+    /* Small screens: 2 cards per row */
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .wrap {
+        padding: 16px;
+      }
+
+      .info h3 {
+        font-size: 15px;
+      }
+
+      .info h4 {
+        font-size: 12px;
+      }
+
+      .logo img {
+        max-width: 100px;
+      }
+    }
+
+    /* Extra small screens: Still 2 cards but smaller */
+    @media (max-width: 480px) {
+      .grid {
+        gap: 12px;
+      }
+
+      .wrap {
+        padding: 12px;
+      }
+
+      .info {
+        padding: 12px 8px;
+      }
+
+      .info h3 {
+        font-size: 14px;
+      }
+
+      .info h4 {
+        font-size: 11px;
+      }
+
+      .logo {
+        padding: 12px;
+        min-height: 70px;
+      }
+
+      .logo img {
+        max-width: 90px;
+        max-height: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <main class="grid">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="Vijay Shekhar Sharma">
+        </div>
+        <div class="info">
+          <h3>Vijay Shekhar Sharma</h3>
+          <h4>Founder & CEO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/paytm_rect_06df45a24f.svg" alt="Paytm">
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/Rectangle_427_637d69bb57.png" alt="Kunal Shah">
+        </div>
+        <div class="info">
+          <h3>Kunal Shah</h3>
+          <h4>Founder</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/cred_0a47d7b4f8.png" alt="CRED">
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/amrish_rau_pine_labs_144e5e587c.jpg" alt="Amrish Rau">
+        </div>
+        <div class="info">
+          <h3>Amrish Rau</h3>
+          <h4>CEO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/pine_labs_0aa2407434.png" alt="Pine Labs">
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/Sampad_swain_Instamojo_f12bf6341e.jpg" alt="Sampad Swain">
+        </div>
+        <div class="info">
+          <h3>Sampad Swain</h3>
+          <h4>Co-Founder & CEO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/instamojo_8763e704f7.png" alt="Instamojo">
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="Ankush Sachdeva">
+        </div>
+        <div class="info">
+          <h3>Ankush Sachdeva</h3>
+          <h4>Co-Founder & CEO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat">
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg" alt="Bhanu Pratap Singh">
+        </div>
+        <div class="info">
+          <h3>Bhanu Pratap Singh</h3>
+          <h4>Co-Founder & CTO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat">
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/farid_ahsan_sharechat_1251f28141.png" alt="Farid Ahsan">
+        </div>
+        <div class="info">
+          <h3>Farid Ahsan</h3>
+          <h4>Co-Founder & COO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat">
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="card">
+        <div class="photo">
+          <img src="https://cdn.masaischool.com/masai-website/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg" alt="Amit Kumar Agarwal">
+        </div>
+        <div class="info">
+          <h3>Amit Kumar Agarwal</h3>
+          <h4>Founder & CEO</h4>
+        </div>
+        <div class="logo">
+          <img src="https://cdn.masaischool.com/masai-website/nobroker_rect_28c9778c30.svg" alt="NoBroker">
+        </div>
+      </article>
+
+    </main>
+  </div>
+</body>
+</html>
