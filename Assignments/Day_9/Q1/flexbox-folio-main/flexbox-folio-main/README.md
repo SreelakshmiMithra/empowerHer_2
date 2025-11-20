@@ -1,6 +1,6 @@
 Portfolio of Lakshmi Badiginchala Project Info
 
-URL: (Insert your deployed project URL here)
+URL:https://flexbox-folio.lovable.app/
 
 Description: This is my personal front-end developer portfolio showcasing my skills in HTML, CSS, JavaScript, SQL, Git, Canva, and design capabilities. The portfolio is fully responsive, interactive, and built with modern web technologies.
 
