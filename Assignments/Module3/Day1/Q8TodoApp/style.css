@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Todo Item Styles */
+.todo-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.todo-item.completed {
+    background: #d4edda;
+    text-decoration: line-through;
+    color: #155724;
+}
+
+/* Button Styles */
+button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button.delete-btn {
+    background: #e74c3c;
+    color: #fff;
+}
+
+button.delete-btn:hover {
+    background: #c0392b;
+}
+
+button.toggle-btn {
+    background: #3498db;
+    color: #fff;
+}
+
+button.toggle-btn:hover {
+    background: #2980b9;
+}
+
+/* No Todos Message */
+#todo-container p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
