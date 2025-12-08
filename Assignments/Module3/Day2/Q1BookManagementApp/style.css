@@ -1,4 +1,3 @@
-/* Base and layout */
 :root {
   --bg: #f4f7fb;
   --card: #fff;
@@ -12,7 +11,7 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
 
 .app {
   display: grid;
-  grid-template-columns: 1fr 320px; /* main + right sidebar */
+  grid-template-columns: 1fr 320px;
   gap: 28px;
   max-width: 1200px;
   margin: 28px auto;
@@ -20,7 +19,6 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
   align-items: start;
 }
 
-/* Top bar inside main */
 .topbar {
   display:flex;
   justify-content:space-between;
@@ -30,17 +28,14 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
 .brand { font-weight:700; font-size:20px; color:#0f172a; }
 .header-actions { color:var(--muted); font-size:14px; }
 
-/* Content area */
 .content h1 { margin: 8px 0 18px; font-size:26px; }
 
-/* Books grid: 3 per row at desktop */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* Card */
 .book-card {
   background: var(--card);
   border-radius: 10px;
@@ -51,16 +46,14 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
   min-height: 320px;
 }
 
-/* Image - balanced size using aspect-ratio */
 .book-card .cover {
   width: 100%;
-  aspect-ratio: 16 / 9;       /* balanced rectangle */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display:block;
   background: #eee;
 }
 
-/* Body */
 .card-body {
   padding: 14px 16px;
   flex: 1;
@@ -72,7 +65,6 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
 .card-body h3 { margin: 6px 0 8px; font-size:18px; }
 .card-body p { margin: 4px 0; color: var(--muted); font-size:14px; }
 
-/* Actions area */
 .card-actions {
   display:flex;
   gap:10px;
@@ -93,7 +85,6 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
 .delete-btn { background:#ef4444; color:white; }
 .view-btn   { background:var(--accent); color:white; }
 
-/* Sidebar */
 .sidebar {
   background: var(--sidebar);
   color: white;
@@ -125,7 +116,6 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
   font-weight:700;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   inset: 0;
@@ -154,7 +144,6 @@ body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; back
   font-size:28px;
 }
 
-/* Responsive */
 @media (max-width: 1000px) {
   .books-grid { grid-template-columns: repeat(2, 1fr); }
   .app { grid-template-columns: 1fr 320px; gap:18px; padding: 12px; }
