@@ -1,0 +1,166 @@
+/* Base and layout */
+:root {
+  --bg: #f4f7fb;
+  --card: #fff;
+  --accent: #0ea5ff;
+  --muted: #6b7280;
+  --sidebar: #1f2937;
+}
+
+* { box-sizing: border-box; }
+body, html { height: 100%; margin: 0; font-family: Inter, system-ui, Arial; background: var(--bg); color: #111827; }
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 320px; /* main + right sidebar */
+  gap: 28px;
+  max-width: 1200px;
+  margin: 28px auto;
+  padding: 0 16px;
+  align-items: start;
+}
+
+/* Top bar inside main */
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom: 12px;
+}
+.brand { font-weight:700; font-size:20px; color:#0f172a; }
+.header-actions { color:var(--muted); font-size:14px; }
+
+/* Content area */
+.content h1 { margin: 8px 0 18px; font-size:26px; }
+
+/* Books grid: 3 per row at desktop */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.book-card {
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(8,15,20,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+/* Image - balanced size using aspect-ratio */
+.book-card .cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;       /* balanced rectangle */
+  object-fit: cover;
+  display:block;
+  background: #eee;
+}
+
+/* Body */
+.card-body {
+  padding: 14px 16px;
+  flex: 1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.card-body h3 { margin: 6px 0 8px; font-size:18px; }
+.card-body p { margin: 4px 0; color: var(--muted); font-size:14px; }
+
+/* Actions area */
+.card-actions {
+  display:flex;
+  gap:10px;
+  padding: 12px;
+  justify-content:center;
+  border-top: 1px solid #f1f5f9;
+  background: #fff;
+}
+.card-actions button {
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  font-size:13px;
+}
+.update-btn { background:#f59e0b; color:white; }
+.delete-btn { background:#ef4444; color:white; }
+.view-btn   { background:var(--accent); color:white; }
+
+/* Sidebar */
+.sidebar {
+  background: var(--sidebar);
+  color: white;
+  padding: 22px;
+  border-radius: 10px;
+  position: sticky;
+  top: 24px;
+}
+.sidebar h2 { margin:0 0 12px; font-size:20px; }
+.form label { display:block; margin-top:10px; color:#e6eef8; font-size:13px; }
+.form input {
+  width:100%;
+  padding:10px 12px;
+  margin-top:8px;
+  border-radius:8px;
+  border: none;
+  outline: none;
+  font-size:14px;
+}
+.btn.primary {
+  margin-top:12px;
+  width:100%;
+  padding:12px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.45);
+  z-index: 60;
+}
+.modal[aria-hidden="false"] { display:flex; }
+.modal-card {
+  width: 360px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  box-shadow:0 16px 40px rgba(2,6,23,0.25);
+}
+.modal-card img { width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:10px; }
+.modal-close {
+  position:absolute;
+  right:22px; top:18px;
+  background:transparent;
+  border:none;
+  color:white;
+  font-size:28px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .books-grid { grid-template-columns: repeat(2, 1fr); }
+  .app { grid-template-columns: 1fr 320px; gap:18px; padding: 12px; }
+}
+@media (max-width: 700px) {
+  .app { grid-template-columns: 1fr; }
+  .books-grid { grid-template-columns: 1fr; }
+  .sidebar { position:relative; top:auto; width:100%; }
+}

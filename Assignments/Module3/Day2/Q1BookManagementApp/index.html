@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Management App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- MAIN -->
+    <main class="main">
+      <header class="topbar">
+        <div class="brand">Book Management</div>
+        <div class="header-actions">Welcome, Admin</div>
+      </header>
+
+      <section class="content">
+        <h1>Books</h1>
+        <div id="booksContainer" class="books-grid" aria-live="polite">
+          <!-- cards injected here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Add New Book</h2>
+      <form id="addBookForm" class="form">
+        <label>Title</label>
+        <input id="title" placeholder="Book title" required />
+        <label>Author</label>
+        <input id="author" placeholder="Author name" required />
+        <label>Price (USD)</label>
+        <input id="price" type="number" step="0.01" placeholder="e.g. 19.99" required />
+        <label>Cover Image URL</label>
+        <input id="coverImageURL" placeholder="https://..." />
+        <button type="submit" class="btn primary">Add Book</button>
+      </form>
+      <p class="note">All changes sync in realtime with Firestore.</p>
+    </aside>
+
+  </div>
+
+  <!-- VIEW DETAILS MODAL -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+      <img id="modalImage" alt="Book cover" />
+      <h2 id="modalTitle"></h2>
+      <p><strong>Author:</strong> <span id="modalAuthor"></span></p>
+      <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+    </div>
+  </div>
+
+  <!-- Firebase CDN - module -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+    // ←—— REPLACE OR VERIFY if yours differs — this is the config you shared earlier
+    const firebaseConfig = {
+      apiKey: "AIzaSyD-6aKduCGsoozkn5RiKqndtUcU5yCbM5U",
+      authDomain: "bookmanagementwebapp-63253.firebaseapp.com",
+      projectId: "bookmanagementwebapp-63253",
+      storageBucket: "bookmanagementwebapp-63253.appspot.com",
+      messagingSenderId: "208715717748",
+      appId: "1:208715717748:web:e4146653b65204ac650521",
+      measurementId: "G-ZW5ZXYDZL7"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // make db accessible for app.js
+    window.firebaseExports = { db };
+  </script>
+
+  <!-- Application logic -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
