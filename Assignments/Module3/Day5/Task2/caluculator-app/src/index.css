@@ -83,11 +83,12 @@ button {
 
 /* Remove default select styling issue */
 .calculator select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  -webkit-appearance: none;  /* Chrome, Safari */
+  -moz-appearance: none;     /* Firefox */
+  appearance: none;           /* Standard */
   cursor: pointer;
 }
+
 
 /* Button */
 .calculator button {
