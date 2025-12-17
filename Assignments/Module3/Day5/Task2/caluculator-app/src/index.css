@@ -1,0 +1,131 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* CENTER EVERYTHING */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.8em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* Default Button */
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Calculator Container */
+.calculator {
+  background-color: #1e1e1e;
+  padding: 28px;
+  border-radius: 16px;
+  width: 360px; /* medium & balanced */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+/* SAME SIZE FOR INPUT & SELECT */
+.calculator input,
+.calculator select {
+  width: 100%;
+  height: 46px;            
+  padding: 0 14px;
+  margin-bottom: 14px;
+
+  border-radius: 10px;
+  border: 1px solid #ffd3d3;
+  background-color: #ebdddd;
+  color: #333;
+
+  font-size: 1rem;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+/* Remove default select styling issue */
+.calculator select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* Button */
+.calculator button {
+  width: 100%;
+  height: 48px;
+  margin-top: 10px;
+
+  background-color: #f88585;
+  color: rgb(219, 197, 197);
+  font-size: 1.05rem;
+}
+
+.calculator button:hover {
+  background-color: #946b6b;
+}
+
+/* Results */
+.results {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.results h3 {
+  margin-bottom: 8px;
+}
+
+.results ul {
+  padding-left: 20px;
+}
+
+.results li {
+  margin-bottom: 6px;
+  color: #ffe6e6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #fb9c87;
+    background-color: #000000;
+  }
+}
