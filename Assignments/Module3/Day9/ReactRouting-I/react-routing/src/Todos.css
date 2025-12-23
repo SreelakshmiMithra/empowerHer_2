@@ -1,0 +1,12 @@
+.todo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.todo-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+}
