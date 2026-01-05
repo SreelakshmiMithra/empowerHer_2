@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tailwind CSS Basics Assignment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <nav class="bg-white p-4 flex flex-col md:flex-row gap-4 justify-center shadow">
+    <a href="#" class="hover:text-blue-500">Home</a>
+    <a href="#" class="hover:text-blue-500">Features</a>
+    <a href="#" class="hover:text-blue-500">Contact</a>
+  </nav>
+
+  <section class="text-center mt-10">
+    <h2 class="text-xl md:text-3xl lg:text-5xl font-bold
+               bg-gradient-to-r from-blue-500 to-purple-600
+               text-transparent bg-clip-text">
+      Tailwind CSS Basics Exploration
+    </h2>
+
+    <div class="w-64 mx-auto mt-6">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+           class="rounded-lg shadow-lg hover:scale-105 transition">
+    </div>
+
+    <button class="mt-6 bg-gray-200 hover:bg-gray-300 active:bg-gray-400
+                   px-6 py-2 rounded transition">
+      Get Started
+    </button>
+  </section>
+
+  <section class="max-w-md mx-auto mt-10">
+    <h3 class="text-xl font-bold mb-3">Technologies</h3>
+    <ul class="list-disc list-inside pl-5 space-y-2">
+      <li class="hover:text-blue-500">HTML</li>
+      <li class="hover:text-blue-500">CSS</li>
+      <li class="hover:text-blue-500">Tailwind CSS</li>
+    </ul>
+  </section>
+
+  <section class="max-w-6xl mx-auto mt-12">
+    <h3 class="text-2xl font-bold text-center mb-6">Features</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded shadow">Fast Development</div>
+      <div class="bg-white p-4 rounded shadow">Responsive Design</div>
+      <div class="bg-white p-4 rounded shadow">Utility First</div>
+      <div class="bg-white p-4 rounded shadow">Modern UI</div>
+      <div class="bg-white p-4 rounded shadow">Customizable</div>
+      <div class="bg-white p-4 rounded shadow">Beginner Friendly</div>
+    </div>
+  </section>
+
+  <section class="max-w-sm mx-auto mt-12">
+    <div class="bg-white rounded-lg shadow-lg p-4">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+           class="rounded">
+      <h3 class="text-xl font-bold mt-3">Tailwind Card</h3>
+      <p class="text-gray-600 mt-2">
+        A clean and reusable card component built using Tailwind CSS.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+        Read More
+      </button>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto mt-12">
+    <h3 class="text-2xl font-bold mb-4 text-center">User Table</h3>
+
+    <table class="w-full border">
+      <tr class="bg-gray-200">
+        <th class="border p-2">Name</th>
+        <th class="border p-2">Role</th>
+        <th class="border p-2">Age</th>
+      </tr>
+
+      <tr class="hover:bg-gray-100">
+        <td class="border p-2">Alex</td>
+        <td class="border p-2">Developer</td>
+        <td class="border p-2">22</td>
+      </tr>
+
+      <tr class="bg-gray-50 hover:bg-gray-100">
+        <td class="border p-2">Sam</td>
+        <td class="border p-2">Designer</td>
+        <td class="border p-2">23</td>
+      </tr>
+
+      <tr class="hover:bg-gray-100">
+        <td class="border p-2">John</td>
+        <td class="border p-2">Tester</td>
+        <td class="border p-2">21</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="max-w-md mx-auto mt-12 mb-16">
+    <h3 class="text-2xl font-bold mb-4 text-center">Contact Form</h3>
+
+    <form class="bg-white p-6 rounded-lg shadow">
+      <input type="text" placeholder="Name"
+        class="w-full border rounded p-2 mb-4 focus:ring-2 focus:ring-blue-500">
+
+      <input type="email" placeholder="Email"
+        class="w-full border rounded p-2 mb-4 focus:ring-2 focus:ring-blue-500">
+
+      <input type="password" placeholder="Password"
+        class="w-full border rounded p-2 mb-4 focus:ring-2 focus:ring-blue-500">
+
+      <button class="w-full bg-blue-500 text-white py-2 rounded">
+        Submit
+      </button>
+    </form>
+  </section>
+
+</body>
+</html>
